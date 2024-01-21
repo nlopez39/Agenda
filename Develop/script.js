@@ -22,6 +22,9 @@ $(function () {
     //hours will be the last number from the id ex.9 in hour-9
     hour = parseInt(id.slice(5), 10);
     // console.log("These are the ids " + initId);
+    //get saved input and place it in the textarea of id
+    var savedInput = localStorage.getItem(id);
+    $("#" + id + " .description").val(savedInput);
 
     var currentHour = parseInt(dayjs().format("HH:mm"), 10);
     if (hour == currentHour) {
@@ -46,20 +49,20 @@ $(function () {
   // var id;
   // var hour;
   //'this' refers to the DOM element to which the event handler is attached; it is attached to the 'container-lg'
-
-  var textAreaEl = $(".description");
+  //$(this) this keyword is used inside $(), then it becomes a jQuery object, and now we can use all properties of jQuery on this method.
+  // var textAreaEl = $(this).siblings(".description");
+  // console.log("TextArea = " + textAreaEl);
 
   containerEl.on("click", ".saveBtn", function (event) {
     var clickedButton = $(event.target);
     //save user input when user clicks on save button
     id = clickedButton.parent().attr("id");
-
+    var textAreaEl = $(this).siblings(".description");
     var userInput = textAreaEl.val();
 
     console.log(userInput);
     //save the id and and user input as key and value pair
     localStorage.setItem(id, userInput);
-    userInput = "";
   });
 
   //
