@@ -60,9 +60,10 @@ $(function () {
     var textAreaEl = $(this).siblings(".description");
     var userInput = textAreaEl.val();
 
-    console.log(userInput);
+    // console.log(userInput);
     //save the id and and user input as key and value pair
     localStorage.setItem(id, userInput);
+    alert("Event has been saved to LocalStorage");
   });
 
   //
