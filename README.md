@@ -13,7 +13,7 @@ Red = Current Events, Green = Future Events, and Gray = Past Events.
 2. **Edit Events**: Enter or edit important events into the event box for differnt hours of the day.
 3. **Save Events**: Save your event by clicking the blue save button. Once saved, you will receive an alert to indicate that the event was saved successfully.
 
-   ![Work Scheduler](Assets/Agenda.gif)
+   ![Work Scheduler](Assets/images/Agenda.gif)
 
 ## Installation
 
